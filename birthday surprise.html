@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ffe5d9, #ffd6e7, #e7d8ff);
+            color: #5b2942;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 18px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 21px;
+        }
+
+        .subtitle {
+            font-size: 22px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 25px;
+            padding: 25px;
+            margin: 25px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        button {
+            border: none;
+            border-radius: 25px;
+            padding: 13px 25px;
+            font-size: 20px;
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        #message {
+            display: none;
+            margin-top: 25px;
+            font-size: 22px;
+            line-height: 1.6;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 25px;
+            animation: float 5s linear;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+
+        }
+
+        .photos {
+            margin-top: 25px;
+        }
+
+        .photos img {
+            width: 200px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>🎂🎉 Happy Birthday My Love ❤️🥰</h1>
+
+        <p class="subtitle">
+            💖✨ You are very special to me! 🫶🏻🌹
+        </p>
+
+
+        <div class="card">
+
+            <h2>🎁🎈 Make a Wish! ✨</h2>
+
+            <p>
+                🌸 May your birthday be filled with happiness,
+                smiles and beautiful memories! 🥰✨
+            </p>
+
+
+            <button onclick="showSurprise()">
+                💕 Click Me 💕
+            </button>
+
+
+            <div id="message">
+
+                🎂💖 Happy Birthday! 💖🎂
+
+                <br><br>
+
+                🥰 May your day be filled with happiness! ✨
+
+                <br>
+
+                🎁 Lots of smiles and beautiful memories! ❤️🫶🏻
+
+                <br>
+
+                🌹 Have a wonderful birthday! 🎉🎈
+
+                <br><br>
+
+                💖✨ Stay Happy & Keep Smiling! ✨💖
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>📸 Our Beautiful Memories ❤️</h2>
+
+            <p>
+                📷 Our special photos will be added here soon! 🥰
+            </p>
+
+            <div class="photos">
+
+                <img src="Memory 1.jpeg" alt="Memory 1">
+<img src="Memory 2.jpeg" alt="Memory 2">
+<img src="Memory 3.jpeg" alt="Memory 3">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function showSurprise() {
+
+            document.getElementById("message").style.display = "block";
+
+
+            for (let i = 0; i < 20; i++) {
+
+                const heart = document.createElement("div");
+
+                heart.className = "heart";
+
+                heart.textContent = "❤️";
+
+                heart.style.left = Math.random() * 100 + "vw";
+
+                heart.style.animationDelay =
+                    Math.random() * 2 + "s";
+
+                document.body.appendChild(heart);
+
+
+                setTimeout(function() {
+
+                    heart.remove();
+
+                }, 5000);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
